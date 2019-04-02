@@ -12,6 +12,12 @@ module.exports = {
         repositoryName: `prismic-gatsby-coffee`,
         path: '/preview',
         previews: true,
+        pages: [{
+          type: 'Product',
+          match: '/products/:uid',
+          path: '/products',
+          component: require.resolve('./src/templates/product.js')
+        }]
       }
     },
     `gatsby-plugin-sass`,
