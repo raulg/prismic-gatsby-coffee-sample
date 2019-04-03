@@ -17,6 +17,11 @@ module.exports = {
           match: '/products/:uid',
           path: '/products',
           component: require.resolve('./src/templates/product.js')
+        },{
+          type: 'Blog_post',
+          match: '/blog/:uid',
+          path: '/blog/',
+          component: require.resolve('./src/templates/blogPost.js')
         }]
       }
     },
