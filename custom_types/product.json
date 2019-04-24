@@ -44,22 +44,6 @@
         "label" : "Sub title",
         "placeholder" : "Kenya"
       }
-    },
-    "product" : {
-      "type" : "IntegrationFields",
-      "config" : {
-        "catalog" : "new-demo--products_catalog",
-        "label" : "Product",
-        "placeholder" : "Map this product page with the Product Catalog data"
-      }
-    },
-    "product_old" : {
-      "type" : "IntegrationFields",
-      "config" : {
-        "catalog" : "new-demo--disrupt_coffee_catalog_api",
-        "label" : "Product_old",
-        "placeholder" : "Map this product page with the Product Catalog data"
-      }
     }
   },
   "Product Description" : {
