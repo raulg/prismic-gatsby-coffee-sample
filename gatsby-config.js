@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-prismic-graphql`,
       options: {
-        repositoryName: repo[1],
+        repositoryName: repo[1], // Loads the repo name from prismic configuration
         path: '/preview',
         previews: true,
         //accessToken: '...',
@@ -24,7 +24,7 @@ module.exports = {
         },{
           type: 'Blog_post',
           match: '/blog/:uid',
-          path: '/blogpost',
+          path: '/blogpost', // Important that this is different from other generated pages, so not '/blog'
           component: require.resolve('./src/templates/blogPost.js')
         }]
       }

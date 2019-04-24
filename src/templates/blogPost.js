@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layouts'
 
+// Template query, uid is passed by the url path
 export const query = graphql`
 query BlogPostQuery($uid: String) {
   prismic{

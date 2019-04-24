@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layouts'
 
+// Query both Blog_homes (singleton) and all Blog_posts (repeatable) documents
 export const query = graphql`
 {
   prismic{
@@ -77,6 +78,7 @@ const RenderBody = ({ blogHome, posts }) => (
 )
 
 export default ({ data }) => {
+  // Check that data was fetched from query
   const doc = data.prismic.allBlog_homes.edges.slice(0,1).pop();
   if(!doc) return null;
 
@@ -86,6 +88,7 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>{RichText.asText(doc.node.meta_title)}</title>
       </Helmet>
+      {/* Path both the query results for blog_home and the array of document results for blog_posts */}
       <RenderBody blogHome={doc.node} posts={data.prismic.allBlog_posts.edges} />
     </Layout>
   );

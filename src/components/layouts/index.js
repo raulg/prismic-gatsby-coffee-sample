@@ -100,6 +100,7 @@ class Layout extends React.Component {
   }
 }
 
+// Not required to use a StaticQuery, but a good example of different query types that can be used and the layout would go through fewer changes
 export default props => (
   <StaticQuery
     query={graphql`

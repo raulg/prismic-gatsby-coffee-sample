@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layouts'
 
+// Query for Product template, depending on uid passed by the url path
 export const query = graphql`
 query ProductQuery($uid: String) {
   prismic{
